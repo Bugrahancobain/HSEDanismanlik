@@ -99,7 +99,8 @@ export default function Home() {
   return (
     <div className="form-container">
       <form className="form" onSubmit={handleSubmit}>
-        <h1 className="form-title">Bilgi Formu</h1>
+        <h1 className="form-title">HSEDanışmanlık Bilgi Formu</h1>
+        <img className="logo" src="./HSELogo.png" alt="" />
         <div className="form-group">
           <label>Adınız ve Soyadınız:</label>
           <input

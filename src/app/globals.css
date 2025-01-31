@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #ff6600; /* Koyu turuncu */
+  background-color: #edbc7c; /* Koyu turuncu */
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
@@ -30,9 +30,14 @@ body {
 
 .form-title {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   font-size: 24px;
   font-weight: bold;
+}
+
+.logo{
+  height: 200px;
+  object-fit: cover;
 }
 
 .form-group {
@@ -62,7 +67,7 @@ textarea {
 .form-button {
   width: 90%;
   padding: 10px;
-  background-color: #ff6600;
+  background-color: #efa13b;
   color: white;
   border: none;
   border-radius: 5px;

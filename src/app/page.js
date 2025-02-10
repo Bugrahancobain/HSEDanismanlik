@@ -50,6 +50,7 @@ export default function Home() {
     <div className="form-container">
       <form className="form" onSubmit={handleSubmit}>
         <h1 className="form-title">HSEDanışmanlık Bilgi Formu</h1>
+        <img className="logo" src="./HSELogo.png" alt="HSELogo" />
         <div className="form-group">
           <label>Adınız ve Soyadınız:</label>
           <input type="text" name="name" value={formData.name} onChange={handleChange} required />

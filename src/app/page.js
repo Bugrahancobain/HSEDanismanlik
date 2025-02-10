@@ -31,6 +31,18 @@ export default function Home() {
       )
       .then(
         () => {
+          // Google Sheets'e veri kaydet
+          fetch("/api/proxy", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          })
+            .then((response) => response.json())
+            .then((data) => console.log("Google Sheets'e kaydedildi:", data))
+            .catch((error) => console.error("Google Sheets'e kaydetme hatası:", error));
+
           setPopupVisible(true);
           setFormData({
             name: "",
@@ -50,7 +62,6 @@ export default function Home() {
     <div className="form-container">
       <form className="form" onSubmit={handleSubmit}>
         <h1 className="form-title">HSEDanışmanlık Bilgi Formu</h1>
-        <img className="logo" src="./HSELogo.png" alt="HSELogo" />
         <div className="form-group">
           <label>Adınız ve Soyadınız:</label>
           <input type="text" name="name" value={formData.name} onChange={handleChange} required />
